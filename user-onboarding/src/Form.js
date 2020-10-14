@@ -28,6 +28,45 @@ export default function Form (props) {
                 <label className='label'>Password
                     <input type='text' name='password' value={values.password} onChange={onChange}   />
                 </label>
+                
+                <label>Role
+                    <select onChange={onChange} value={values.role} name='role'>
+                        <option value=''>----Select Your Role---</option>
+                        <option value='Barbarian'>Barbarian</option>
+                        <option value='Magician'>Magician</option>
+                        <option value='Necromancer'>Necromancer</option>
+                        <option value='Paladin'>Paladin</option>
+                        <option value='Amazon'>Amazon</option>
+                    </select>
+                </label>
+                
+                <label>Server
+                    <select onChange={onChange} value={values.server} name='server'>
+                        <option value=''>----Select Your Server---</option>
+                        <option value='US WEST'>US WEST</option>
+                        <option value='US EAST'>US EAST</option>
+                        <option value='EUROPE'>EUROPE</option>
+                        <option value='ASIA'>ASIA</option>                        
+                    </select>
+                </label>
+
+                
+            <div>
+                <label>Male
+                        <input type='radio' name='gender' value='male' checked={values.gender === 'male'} onChange={onChange} />
+                    </label>    
+                    <label>Female
+                        <input type='radio' name='gender' value='female' checked={values.gender === 'female'} onChange={onChange} />
+                    </label>    
+                    <label>Other
+                        <input type='radio' name='gender' value='other' checked={values.gender === 'other'} onChange={onChange} />
+                    </label>  
+            </div>
+
+                <label>Hell Mode
+                    <input type='checkbox' name='hellmode' value={values.hellmode} onChange={onChange} />
+                </label>
+
                 <label className='label'>Terms
                     <input type='checkbox' name='terms' value={values.terms} onChange={onChange} />
                 </label>
@@ -38,6 +77,7 @@ export default function Form (props) {
                     <div>{errors.email}</div>
                     <div>{errors.password}</div>
                     <div>{errors.terms}</div>
+                    <div>{errors.role}</div>
                 </div>
             
                 <button disabled={disabled} >Submit</button>

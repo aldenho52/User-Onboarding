@@ -12,14 +12,22 @@ import User from './User'
     username: '',
     email: '',
     password: '',
-    terms: false
+    terms: false,
+    role: '',
+    server: '',
+    gender: '',
+    hellmode: 'false',
   }
 
   const initialFormErrors = {
     username: '',
     email: '',
     password: '',
-    terms: false  
+    terms: false,
+    role: '',
+    server: '',
+    gender: '',
+    hellmode: 'false'
   }
 
   const initialUsers = []
@@ -31,6 +39,7 @@ function App() {
   const [formValues, setFormValues] = useState(initialFormValues)
   const [formErrors, setFormErrors] = useState(initialFormErrors)
   const [disabled, setDisabled] = useState(initialDisabled)
+
 
   // Axios Post request
   const postNewUser = (newUser) => {
@@ -77,10 +86,15 @@ function App() {
       username: formValues.username.trim(),
       email: formValues.email.trim(),
       password: formValues.password.trim(),
-      terms: formValues.terms
+      terms: formValues.terms,
+      role: formValues.role,
+      server: formValues.server,
+      gender: formValues.gender,
+      hellmode: formValues.hellmode
     }
     postNewUser(newUser)
   }
+  // Effects
 
   useEffect(() => {
     Schema.isValid(formValues).then(valid => {

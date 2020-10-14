@@ -10,6 +10,10 @@ function User({ details }) {
       <h2>{details.username}</h2>
       <p>Email: {details.email}</p>
       <p>Password: {details.password}</p>
+      <p>Character: {details.role}</p>
+      <p>Server: {details.server}</p>
+      <p>Gender: {details.gender}</p>
+      <p>Hell Mode? {details.hellmode ? 'ON' : 'OFF'}</p>
     </div>
   )
 }
