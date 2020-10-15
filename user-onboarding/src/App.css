@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  
+}
+
+.loading-page {
+  background-image: url('https://images-na.ssl-images-amazon.com/images/I/51H1058AMWL._SX342_.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1500px;
+}
+
+.form {
+  background: gray;
+  opacity: 70%;
+  width: 40%;
+  margin: 0 auto;
+  color: white;
+  border-radius: 10px;
+}
+
+.paddingDiv {
+  height: 40vh;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin: 2%;
+}
+
+button {
+  margin: 3% auto;
+  padding: 2%;
+  font-size: 1.3rem;
+  background: white;
+  color: red;
+}
+
+.users-container {
+  background-image: url('https://d2boost.com/diablo2/wp-content/uploads/2018/11/Diablo-2-classes.jpg');
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+
+.user-container{
+  background: gray;
+  opacity: 70%;
+  width: 20%;
+  margin: 0 auto;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5% 0;
+}
+
+.users-header {
+  font-size: 80px;
+}
