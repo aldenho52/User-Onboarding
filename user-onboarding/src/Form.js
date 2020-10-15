@@ -71,7 +71,7 @@ export default function Form (props) {
                     <input type='checkbox' name='terms' value={values.terms} onChange={onChange} />
                 </label>
 
-                <div className="errors">
+                <div style={{color: 'red'}} className="errors">
                 {/* 🔥 RENDER THE VALIDATION ERRORS HERE */}
                     <div>{errors.username}</div>
                     <div>{errors.email}</div>
