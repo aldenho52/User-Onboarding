@@ -104,17 +104,22 @@ function App() {
 
   return (
     <div className="App">
-      <Form 
-        values={formValues}
-        errors={formErrors}
-        change={inputChange}
-        submit={formSubmit}
-        disabled={disabled}
-      />
-      <h2>Users</h2>
-      {users.map((user) => {
-        return <User key={user.id} details={user} />;
-      })}
+    <div className='loading-page'>
+        <div className='paddingDiv'></div>
+        <Form 
+            values={formValues}
+            errors={formErrors}
+            change={inputChange}
+            submit={formSubmit}
+            disabled={disabled}
+          />      
+    </div>
+    <div className='users-container'> 
+      <h2 className="users-header">Users</h2>
+        {users.map((user) => {
+          return <User key={user.id} details={user} />;
+        })}
+    </div>
     </div>
   );
 }

@@ -15,7 +15,7 @@ export default function Form (props) {
     }
 
     return (
-        <div>
+        <div className='form'>
             <h1>Create an Account</h1>
             <form className='form-container' onSubmit={onSubmit}>
                 <label className='label'>Username
@@ -29,7 +29,7 @@ export default function Form (props) {
                     <input type='text' name='password' value={values.password} onChange={onChange}   />
                 </label>
                 
-                <label>Role
+                <label className='label'>Role
                     <select onChange={onChange} value={values.role} name='role'>
                         <option value=''>----Select Your Role---</option>
                         <option value='Barbarian'>Barbarian</option>
@@ -40,7 +40,7 @@ export default function Form (props) {
                     </select>
                 </label>
                 
-                <label>Server
+                <label className='label'>Server
                     <select onChange={onChange} value={values.server} name='server'>
                         <option value=''>----Select Your Server---</option>
                         <option value='US WEST'>US WEST</option>
@@ -63,7 +63,7 @@ export default function Form (props) {
                     </label>  
             </div>
 
-                <label>Hell Mode
+                <label className='label'>Hell Mode
                     <input type='checkbox' name='hellmode' value={values.hellmode} onChange={onChange} />
                 </label>
 
@@ -80,7 +80,7 @@ export default function Form (props) {
                     <div>{errors.role}</div>
                 </div>
             
-                <button disabled={disabled} >Submit</button>
+                <button disabled={disabled}>Submit</button>
             </form>
         </div>
     )
